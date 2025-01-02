@@ -85,12 +85,14 @@ main{
     margin-top: 130px;
 }
 main section.hero{
-    background-color: #3F4347;
-    color: #FFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    row-gap: 3vh;
+    background-image: url("img/trust.webp");
+    background-color: rgba(34,53,56, 0.8);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    width: 100%;
+    height: 85vw;
 }
 
 main section.hero .hero-content{
@@ -99,58 +101,7 @@ main section.hero .hero-content{
 main section.hero h1{
     text-align: center;
     font-size: 1.7rem;
-}
-main section.hero blockquote{
-    font-size: 1.2rem;
-    text-align: center;
-    margin-top: 5vh;
-}
-main section.hero .hepse{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 3vh;
-}
-main section.hero .hero-images{
-    width: 100%;
-    height: 500px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-main section.hero .hero-images .hero-images-scroll{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: row;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-}
-main section.hero .hero-arrow{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: absolute;
-    margin: auto;
-}
-main section.hero .hero-arrow i{
-    font-size: 2.4em;
-}
-main section.hero .img_hepse{
-    width: 100%;
-    height: 100%;
-    flex: none;
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-}
-main section.hero .img_hepse.humain{
-    background-color: red;
-}
-main section.hero .img_hepse.efficacite{
-    background-color: blue;
+    line-height: 2.5rem;
 }
 /*----------------------Footer--------------------------------------*/
 footer{
@@ -161,6 +112,8 @@ footer{
 
 /*----------------------Pour ordinateur--------------------------------------*/
 @media only screen and (min-width: 768px){
+
+    /*header--------------------------------------------------------------------------*/
     header .icon i{
         display: none;
     }
@@ -175,7 +128,23 @@ footer{
         color: #b5973dd3;
         opacity: 0.7;
     }
+    /*main---------------------------------------------------------------------------------*/
+    main section.hero{
+        background-image: url("img/ammonside.png");
+        background-color: rgba(34,53,56, 0.8);
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #ffffff;
+        width: 100%;
+        height: 30vw;
+    }
     main section.hero .hero-content{
         padding: 5vw;
+    }
+    main section.hero h1{
+        text-align: center;
+        font-size: 2.7vw;
+        line-height: 3.5vw;
     }
 }
