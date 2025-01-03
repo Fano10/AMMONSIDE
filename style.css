@@ -1,7 +1,7 @@
 /*-------------------Général---------------------------------------*/
 html,body{
     box-sizing: border-box;
-    background-color: red;
+    background-color: #181F22;
     width: 100%;
     height: auto;
     margin: 0;
@@ -9,6 +9,9 @@ html,body{
     border: 0;
     z-index: 0;
     position: relative;
+    font-family: "Duru Sans", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 * {
     box-sizing: border-box;
@@ -32,11 +35,14 @@ header{
     top:0;
     z-index: 50;
     transition: 0.3s;
+    font-family: "Markazi Text", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 header .en_tete{
     width: 100%;
     height: 30%;
-    background-color: rgb(10, 66, 130);
+    background-color: #181F22;
 }
 header .icon{
     height: 70%;
@@ -46,6 +52,13 @@ header .icon{
     justify-content: space-between;
     padding: 0vh 2vh 0vh 2vh;
 }
+header #logo{
+    border-radius: 10px;
+}
+header #logo:hover{
+    cursor: pointer;
+}
+
 header .icon i{
     color: white;
     font-size: 35px;
@@ -81,9 +94,10 @@ div.navigation_mobile nav a {
 /*----------------------Main--------------------------------------*/
 main{
     background-color: #01ff67;
-    height: 3000px;
-    margin-top: 130px;
+    height: auto;
+    margin-top: 125px;
 }
+/*----------------------Section hero-------------------------------*/
 main section.hero{
     background-image: url("img/trust.webp");
     background-color: rgba(34,53,56, 0.8);
@@ -100,9 +114,96 @@ main section.hero .hero-content{
 }
 main section.hero h1{
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 2rem;
     line-height: 2.5rem;
 }
+
+/*---------------------Section apropos------------------------------*/
+main section.apropos{
+    background-image: linear-gradient(#181F22, #8D9496, #000);
+    color:#FFF;
+    font-size: 0.9rem;
+    line-height: 2.5rem;
+    padding: 5vh;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+main section.apropos .apropos-video video{
+    width: 100%;
+    height: auto;
+    border: 2px solid #000000;
+    border-radius: 30px;
+}
+/*-----------------------Section nos services-------------------------*/
+ main section.services{
+    background-color: #000;
+    color: #FFF;
+    width: 100%;
+    height: auto;
+    font-size: 0.9rem;
+    line-height: 2.5rem;
+    padding: 5vh;
+    text-align: center;
+}
+main section.services .services-details{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,350px);
+    max-width: calc(3 * 400px); /* Limite la largeur totale à 3 colonnes */
+    grid-template-rows: auto;
+    row-gap: 2vw;
+    column-gap: 2vw;
+    margin: 0 auto;
+}
+main section.services .services-details div{
+    width: 100%;
+    max-width: 350px;
+    height: 500px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(34,53,56, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 40%;
+    transition: transform 0.5s;
+    place-self: center;
+}
+main section.services .services-details div:hover{
+    transform: scale(1.02);
+}
+main section.services .services-immobilier{
+    background-image: url("img/immobilier2.jpg");
+    background-blend-mode: multiply;
+}
+main section.services .services-allocation{
+    background-image: url("img/allocation2.jpg");
+    background-blend-mode: multiply;
+}
+main section.services .services-voyage{
+    background-image: url("img/assistant\ voyage2.jpg");
+    background-blend-mode: multiply;
+}
+main section.services .services-lourde{
+    background-image: url("img/voiture\ lourde2.jpg");
+    background-blend-mode: multiply;
+}
+main section.services .services-demenagement{
+    background-image: url("img/demenagement2.jpg");
+    background-blend-mode: multiply;
+}
+main section.services .services-prestation{
+    background-image: url("img/prestation\ de\ service2.jpg");
+    background-blend-mode: multiply;
+}
+
+
+
+
 /*----------------------Footer--------------------------------------*/
 footer{
     background-color: yellow;
@@ -146,5 +247,17 @@ footer{
         text-align: center;
         font-size: 2.7vw;
         line-height: 3.5vw;
+    }
+    main section.apropos{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 3vw;
+        font-size: 1.3vw;
+        line-height: 2.2vw;
+    }
+    main section.apropos .apropos-video{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        align-self: center;
     }
 }
