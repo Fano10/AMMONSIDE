@@ -17,6 +17,12 @@ function navMobile(){
     });
 }
 
+function navLogo(){
+    const logo = document.getElementById("logo");
+    logo.addEventListener("click", ()=>{
+        window.location.hash = "hero";
+    });
+}
 function scrollHeader(){
     let lastScrollTop = 0;
     const navbar = document.getElementById("header");
@@ -40,6 +46,7 @@ function scrollHeader(){
 function main(){
     navMobile();
     scrollHeader();
+    navLogo();
 }
 
 window.onload = main;

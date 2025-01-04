@@ -12,6 +12,7 @@ html,body{
     font-family: "Duru Sans", serif;
     font-weight: 400;
     font-style: normal;
+    scroll-behavior: smooth;
 }
 * {
     box-sizing: border-box;
@@ -93,7 +94,7 @@ div.navigation_mobile nav a {
 }
 /*----------------------Main--------------------------------------*/
 main{
-    background-color: #01ff67;
+    background-color: #181F22;
     height: auto;
     margin-top: 125px;
 }
@@ -146,16 +147,16 @@ main section.apropos .apropos-video video{
     font-size: 0.9rem;
     line-height: 2.5rem;
     padding: 5vh;
-    text-align: center;
+}
+main section.services h1{
+    margin-bottom: 2vw;
 }
 main section.services .services-details{
     display:grid;
-    grid-template-columns: repeat(auto-fit,350px);
-    max-width: calc(3 * 400px); /* Limite la largeur totale à 3 colonnes */
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
-    row-gap: 2vw;
+    row-gap: 2.5vw;
     column-gap: 2vw;
-    margin: 0 auto;
 }
 main section.services .services-details div{
     width: 100%;
@@ -201,14 +202,81 @@ main section.services .services-prestation{
     background-blend-mode: multiply;
 }
 
+/*----------------------Section contact---------------------------------*/
+main section.contact{
+    background-color: #FFF;
+    padding: 5vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4vw;
+    width: 100%;
+    height: auto;
+}
 
+main section.contact .contact-formulaire{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2vh;
+}
 
+main section.contact .contact-formulaire input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #000;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+}
+main section.contact .contact-formulaire textarea{
+    width: 100%;
+    height: 140px;
+    border: 1px solid #000;
+    outline: none;
+    padding-left: 25px;
+    padding-top: 15px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 20px;
+}
+main section.contact .contact-formulaire button{
+    padding: 15px 30px;
+    font-size: 16px;
+    color:#fff;
+    border:none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #ff994f, #fa6d86);
+    cursor: pointer;
+}
+
+main section.contact .contact-social-media{
+    display: flex;
+    justify-content: space-between;
+}
+
+main section.contact .contact-social-media i{
+    font-size: 50px;
+    color: #000;
+
+}
+
+section.contact .contact-formulaire *:not(button):focus{
+    border: 2px solid #ff994f;
+}
+section.contact .contact-formulaire *:not(button)::placeholder{
+    color: #a9a;
+}
 
 /*----------------------Footer--------------------------------------*/
 footer{
-    background-color: yellow;
+    background-color: #181F22;
     width: 100%;
-    height: 20px;
+    height: auto;
+    text-align: center;
+    color: #FFF;
 }
 
 /*----------------------Pour ordinateur--------------------------------------*/
@@ -259,5 +327,34 @@ footer{
         grid-column-start: 1;
         grid-column-end: 3;
         align-self: center;
+    }
+    main section.services{
+        font-size: 1.3vw;
+        line-height: 2.2vw;
+    }
+
+    main section.contact .contact-conteneur{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    main section.contact .contact-formulaire{
+        width: 50%;
+        height: auto;
+    }
+    main section.contact .contact-social-media{
+        display: flex;
+        justify-content: center;
+        gap: 5vw;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width:1000px){
+    main section.services .services-details{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (min-width: 1000px){
+    main section.services .services-details{
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
